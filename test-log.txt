@@ -1,0 +1,27 @@
+=== B-Tree Test Suite ===
+Run started: 2026-07-20T08:16:55.287Z
+
+--- Fixed test cases ---
+PASS: inserted 12 keys, tree height 3, in-order sorted correctly
+PASS: deletions (including borrow/merge cases) leave tree valid
+PASS: deleting all keys empties the tree cleanly
+
+--- Randomized stress test: t=2, 200 keys (run A) ---
+  inserted 200 operations -> 175 unique keys, height=6
+  mixed phase: 303 total inserts, 97 deletes (65 of them on missing keys), height=5, size=206
+  drained remaining 206 keys, tree is now empty, invariants held throughout
+PASS: t=2, 200-key stress test completed with no invariant violations
+
+--- Randomized stress test: t=4, 500 keys (run B) ---
+  inserted 500 operations -> 420 unique keys, height=4
+  mixed phase: 753 total inserts, 247 deletes (182 of them on missing keys), height=4, size=547
+  drained remaining 547 keys, tree is now empty, invariants held throughout
+PASS: t=4, 500-key stress test completed with no invariant violations
+
+--- Randomized stress test: t=8, 1000 keys (run C) ---
+  inserted 1000 operations -> 856 unique keys, height=3
+  mixed phase: 1494 total inserts, 506 deletes (354 of them on missing keys), height=3, size=1036
+  drained remaining 1036 keys, tree is now empty, invariants held throughout
+PASS: t=8, 1000-key stress test completed with no invariant violations
+
+=== ALL TESTS PASSED ===

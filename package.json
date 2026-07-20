@@ -1,0 +1,10 @@
+{
+  "name": "btree-index",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Memory-efficient B-Tree index with configurable branching factor",
+  "main": "src/BTree.js",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
